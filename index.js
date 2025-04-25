@@ -1,4 +1,5 @@
 const express = require("express")
+const jogadorController = require("../Projeto MVC/MVC/Controllers/JogadorController")
 
 class Server{
     
@@ -9,6 +10,7 @@ class Server{
         this.app = express()
         this.porta = 3000
         this.on()
+        new jogadorController(this.app)
     }
 
     on(){
